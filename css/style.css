@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css?family=Acme');
+@import url('https://fonts.googleapis.com/css?family=Philosopher:400,700');
+
+body {
+  font-family: 'Acme', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+#header {
+  background: url('../images/header.png') no-repeat;
+  background-position-x: -1px;
+  height: 308px;
+  width: 100%;
+}
+
+#header .logo-op {
+  background: url('../images/laopinion.png') no-repeat;
+  height: 94px;
+  width: 340px;
+}
+
+#header .logo-rusia {
+  background: url('../images/logoRusia.png') no-repeat;
+  height: 124px;
+  width: 340px;
+}
+
+#header .contador {
+  background: url('../images/contadord.png') no-repeat;
+  background-position: 50% -5px;
+  height: 112px;
+  margin-bottom: 35px;
+  color: #0e48c6;
+}
+
+#header .logosHeader {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  margin: 0 auto;
+  width: 728px;
+}
+
+#header .espacio {
+  width: 50px;
+}
+
+#header .contador .content {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  justify-content: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -moz-justify-content: space-evenly;
+  margin: 0 auto;
+  height: 75px;
+  align-items: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  width: 728px;
+}
+
+#header .contador p {
+  margin: 0 auto;
+  text-align: center;
+  width: 728px;
+}
+
+#header .contador .content .fecha_contador {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  justify-content: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -moz-justify-content: space-evenly;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  width: 148px;
+}
+
+#header .contador .content .fecha_contador #dia,
+#header .contador .content .fecha_contador #hora,
+#header .contador .content .fecha_contador #minuto {
+  font-size: 70px;
+}
+
+#header .contador .content .fecha_contador span {
+  font-size: 36px;
+  font-family: 'Philosopher', sans-serif;
+  margin-top: 8px;
+}
+
+#notas .notaPrincipal,
+#notas .masNotas {
+  font-family: 'Philosopher', sans-serif;
+  position: relative;
+}
+
+#notas .notaPrincipal .logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+#notas .notaPrincipal h3 {
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 15px;
+  width: 308px;
+  z-index: 1;
+}
+
+#notas .notaPrincipal .sombra {
+  -webkit-box-shadow: inset 0px -112px 250px -34px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 0px -112px 250px -34px rgba(0, 0, 0, 1);
+  box-shadow: inset 0px -112px 250px -34px rgba(0, 0, 0, 1);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  z-index: 0;
+}
+
+#notas .notaPrincipal h3 a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+#notas .notaPrincipal .iconVideo {
+  background: url('../images/btnVideo.png') no-repeat;
+  height: 58px;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 92px;
+  z-index: 2;
+}
+
+#notas .notaPrincipal .iconGaleria {
+  background: url('../images/btnGaleria.png') no-repeat;
+  height: 58px;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 92px;
+  z-index: 2;
+}
+
+#notas .masNotas {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  margin-top: 5px;
+}
+
+#notas .masNotas .nota {
+  position: relative;
+  width: 330px;
+}
+
+#notas .masNotas .nota .sombra {
+  -webkit-box-shadow: inset 0px -112px 250px -34px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 0px -112px 250px -34px rgba(0, 0, 0, 1);
+  box-shadow: inset 0px -112px 250px -34px rgba(0, 0, 0, 1);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  z-index: 0;
+}
+
+#notas .masNotas .nota h3 a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+#notas .masNotas .nota h3 {
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 15px;
+  width: 308px;
+  z-index: 1;
+}
+
+#notas .masNotas .nota .iconVideo {
+  background: url('../images/btnVideo.png') no-repeat;
+  height: 58px;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 30%;
+  width: 92px;
+  z-index: 2;
+}
+
+#notas .masNotas .nota .iconGaleria {
+  background: url('../images/btnGaleria.png') no-repeat;
+  height: 58px;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 30%;
+  width: 92px;
+  z-index: 2;
+}
+
+#grupos {
+  margin-top: 38px;
+}
+
+#grupos img {
+  position: relative;
+  left: -1px;
+  width: 100%;
+}
+
+#finalesMundiales {
+  margin-top: 38px;
+  background-color: #bdb189;
+  padding-bottom: 5px;
+}
+
+#finalesMundiales .header {
+  background-color: #0e48c6;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#finalesMundiales .header .btn {
+  height: 50px;
+  display: block;
+  cursor: pointer;
+  width: 50px;
+}
+
+#finalesMundiales .header .btnLeft {
+  background: url('../images/btnLeft.png') no-repeat;
+  background-position-x: 15px;
+}
+
+#finalesMundiales .header .btnRight {
+  background: url('../images/btnRight.png') no-repeat;
+  background-position-x: 15px;
+}
+
+#finalesMundiales .finales {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  background-color: #ffffff;
+}
+
+#finalesMundiales .finales .principal {
+  font-family: 'Philosopher', sans-serif;
+  position: relative;
+  width: 666px;
+}
+
+#finalesMundiales .finales h3 a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+#finalesMundiales .finales h3 {
+  position: absolute;
+  left: 20px;
+  right: 0;
+  bottom: 0;
+  width: 308px;
+  z-index: 1;
+}
+
+#finalesMundiales .finales .sombra {
+  -webkit-box-shadow: inset 0px -112px 250px -34px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 0px -112px 250px -34px rgba(0, 0, 0, 1);
+  box-shadow: inset 0px -112px 250px -34px rgba(0, 0, 0, 1);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  z-index: 0;
+}
+
+#finalesMundiales .finales .iconVideo {
+  background: url('../images/btnVideo.png') no-repeat;
+  height: 58px;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 92px;
+  z-index: 2;
+}
+
+#finalesMundiales .finales .iconGaleria {
+  background: url('../images/btnGaleria.png') no-repeat;
+  height: 58px;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 92px;
+  z-index: 2;
+}
+
+#finalesMundiales .finales .masNotas {
+  font-family: 'Philosopher', sans-serif;
+  width: 330px;
+}
+
+#finalesMundiales .finales .masNotas .nota {
+  position: relative;
+}
+
+#finalesMundiales .finales .masNotas .nota-0 {
+  margin-bottom: 5px;
+}
+
+#finalesMundiales .finales .masNotas .nota h3 a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+#finalesMundiales .finales .masNotas .nota h3 {
+  position: absolute;
+  left: 20px;
+  right: 0;
+  bottom: 0;
+  width: 308px;
+  z-index: 1;
+}
+
+#finalesMundiales .finales .masNotas .nota .sombra {
+  -webkit-box-shadow: inset 0px -112px 250px -34px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 0px -112px 250px -34px rgba(0, 0, 0, 1);
+  box-shadow: inset 0px -112px 250px -34px rgba(0, 0, 0, 1);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  z-index: 0;
+}
+
+#finalesMundiales .finales .masNotas .nota .iconVideo {
+  background: url('../images/btnVideo.png') no-repeat;
+  height: 58px;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 92px;
+  z-index: 2;
+}
+
+#finalesMundiales .finales .masNotas .nota .iconGaleria {
+  background: url('../images/btnGaleria.png') no-repeat;
+  height: 58px;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 92px;
+  z-index: 2;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+#estadios {
+  background: url('../images/fondoEstadios.png') no-repeat;
+  background-position-x: -1px;
+  height: 527px;
+  overflow: hidden;
+  margin-top: 38px;
+  padding-top: 38px;
+  width: 100%;
+}
+
+#estadios .header {
+  /* background-color: #0e48c6; */
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#estadios .header .btn {
+  height: 50px;
+  display: block;
+  cursor: pointer;
+  width: 50px;
+}
+
+#estadios .header .btnLeft {
+  background: url('../images/btnLeft.png') no-repeat;
+  background-position-x: 15px;
+}
+
+#estadios .header .btnRight {
+  background: url('../images/btnRight.png') no-repeat;
+  background-position-x: 15px;
+}
+
+#estadios .slideEstadios {
+  height: 400px;
+}
+
+#estadios .slideEstadios ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+}
+
+#estadios .slideEstadios ul .estadio img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  cursor: pointer;
+}
+
+#estadios .slideEstadios ul .estadio img:hover {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+}
+
+#estadios .slideEstadios ul .estadio .info {
+  margin: 0 auto;
+  opacity: 0;
+  width: 280px;
+}
+
+#estadios .slideEstadios ul .estadio .info.active {
+  animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
+#estadios .slideEstadios ul .estadio .info h3 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+
+#estadios .slideEstadios ul .estadio .info p {
+  font-size: 14px;
+  font-family: 'Philosopher', sans-serif;
+}
+
+#estadios .slideEstadios ul .estadio {
+  background-position: -13px 0px;
+}
+
+#estadios .slideEstadios ul .estadio.active {
+  background: url('../images/soporteEstadio.png') no-repeat;
+  background-position: -13px 0px;
+  animation: fadeInEstadio 0.5s ease-in 1 forwards;
+}
+
+#estadios .slideEstadios ul .estadio.active img {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+}
+
+@keyframes fadeInEstadio {
+  to {
+    height: 660px;
+  }
+}
+
+#balones .header {
+  background-color: #0e48c6;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#balones .header .btn {
+  height: 50px;
+  display: block;
+  cursor: pointer;
+  width: 50px;
+}
+
+#balones .header .btnLeft {
+  background: url('../images/btnLeft.png') no-repeat;
+  background-position-x: 15px;
+}
+
+#balones .header .btnRight {
+  background: url('../images/btnRight.png') no-repeat;
+  background-position-x: 15px;
+}
+
+#balones .slideBalones ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+}
+
+#balones .slideBalones ul .balon {
+  background: url('../images/soporteBalones.png') no-repeat;
+  width: 250px;
+}
+
+#balones .slideBalones ul .balon img {
+  display: block;
+  margin: 0 auto;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  cursor: pointer;
+}
+
+#balones .slideBalones ul .balon img:hover {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+}
+
+#balones .slideBalones ul .balon .info {
+  margin: 0 auto;
+  opacity: 0;
+  width: 280px;
+}
+
+#balones .slideBalones ul .balon .info.active {
+  animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
+#balones .slideBalones ul .balon .info h3 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+
+#balones .slideBalones ul .balon .info p {
+  font-size: 14px;
+  font-family: 'Philosopher', sans-serif;
+}
