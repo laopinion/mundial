@@ -344,6 +344,34 @@ $(document).ready(function() {
     }
   });
 
+  $('#estadiosMovil .slideEstadiosMovil ul .estadio').click(function() {
+    const active = $(this).data('active');
+    const estadios = document.querySelectorAll('#estadiosMovil .estadio');
+    console.log(estadios);
+
+    if (active == 0) {
+      $(this)
+        .find('.info')
+        .addClass('active');
+      $(this).addClass('active');
+      $(this).data('active', 1);
+    } else {
+      $(this)
+        .find('.info')
+        .removeClass('active');
+      $(this).data('active', 0);
+      $(this).removeClass('active');
+      document.querySelector('#estadiosMovil').style.height = '485px';
+    }
+
+    for (let estadio of estadios) {
+      // console.log(estadio);
+      if ($(estadio).hasClass('active')) {
+        document.querySelector('#estadiosMovil').style.height = '750px';
+      }
+    }
+  });
+
   $('#balones .slideBalones ul .balon').click(function() {
     const active = $(this).data('active');
     const balones = document.querySelectorAll('#balones .balon');
@@ -420,6 +448,34 @@ function showDivsEstadios(n) {
   x[slideIndexEstadios - 1].style.display = 'block';
   x[slideIndexEstadios - 1].classList.add('fade-in');
 }
+
+/* ---------------------------------------------------- */
+
+let slideIndexEstadiosMovil = 1;
+showDivsEstadiosMovil(slideIndexEstadiosMovil);
+
+function siguienteEstadioMovil(n) {
+  showDivsEstadiosMovil((slideIndexEstadiosMovil += n));
+}
+
+function showDivsEstadiosMovil(n) {
+  let i;
+  let x = document.getElementsByClassName('slideEstadiosMovil');
+  if (n > x.length) {
+    slideIndexEstadiosMovil = 1;
+  }
+  if (n < 1) {
+    slideIndexEstadiosMovil = x.length;
+  }
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = 'none';
+    x[i].classList.remove('fade-in');
+  }
+  x[slideIndexEstadiosMovil - 1].style.display = 'block';
+  x[slideIndexEstadiosMovil - 1].classList.add('fade-in');
+}
+
+/* --------------------------------------------------------- */
 
 let slideIndexBalones = 1;
 showDivsBalones(slideIndexBalones);

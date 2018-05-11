@@ -443,6 +443,10 @@ body {
   width: 100%;
 }
 
+#estadiosMovil {
+  display: none;
+}
+
 #estadios .header {
   /* background-color: #0e48c6; */
   height: 72px;
@@ -828,9 +832,9 @@ body {
   }
   #header .logo-op {
     background: url('../images/movil/logosHeader.png') no-repeat;
-    height: 32px;
+    height: 50px;
     width: 132px;
-    background-position: -146px -17px;
+    background-position: -146px 0;
   }
 
   #header .contador .content {
@@ -856,6 +860,7 @@ body {
 
   #header .logosHeader {
     margin-top: 30px;
+    justify-content: space-evenly;
     width: 100%;
   }
 
@@ -902,12 +907,157 @@ body {
     display: block;
   }
 
+  #finalesMundiales .finales {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    align-items: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+  }
+
   #finalesMundiales .finales .principal {
+    margin-bottom: 5px;
     width: 100%;
   }
 
   #finalesMundiales .finales .principal .img img {
     height: auto;
     width: 100%;
+  }
+
+  #footer {
+    background: url('../images/movil/footer.png') no-repeat;
+    background-size: 100%;
+  }
+
+  #footer .copy {
+    margin: 0 2%;
+    width: 96%;
+  }
+
+  #footer .logos {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    width: 100%;
+  }
+
+  #footer .logos .logoRusia,
+  #footer .logos .logo {
+    background-size: 100%;
+    height: 70px;
+    margin: 0 auto;
+    width: 185px;
+  }
+
+  #estadios {
+    display: none;
+  }
+
+  #estadiosMovil {
+    background: url('../images/movil/estadios.png') no-repeat;
+    background-position-x: -1px;
+    height: 485px;
+    display: block;
+    overflow: hidden;
+    margin-top: 38px;
+    margin-bottom: 50px;
+    padding-top: 38px;
+    width: 100%;
+    background-size: 100%;
+  }
+
+  #estadiosMovil .header {
+    /* background-color: #0e48c6; */
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #estadiosMovil .header .btn {
+    height: 50px;
+    display: block;
+    cursor: pointer;
+    width: 50px;
+  }
+
+  #estadiosMovil .header .btnLeft {
+    background: url('../images/btnLeft.png') no-repeat;
+    background-position-x: 15px;
+  }
+
+  #estadiosMovil .header .btnRight {
+    background: url('../images/btnRight.png') no-repeat;
+    background-position-x: 15px;
+  }
+
+  /* #estadiosMovil .slideestadiosMovil {
+    height: 400px;
+  } */
+
+  #estadiosMovil .slideEstadiosMovil ul {
+    list-style: none;
+    padding: 0;
+    height: 750px;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+  }
+
+  #estadiosMovil .slideEstadiosMovil ul .estadio img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    cursor: pointer;
+  }
+
+  #estadiosMovil .slideEstadiosMovil ul .estadio img:hover {
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+  }
+
+  #estadiosMovil .slideEstadiosMovil ul .estadio .info {
+    margin: 0 auto;
+    opacity: 0;
+    width: 280px;
+  }
+
+  #estadiosMovil .slideEstadiosMovil ul .estadio .info.active {
+    animation: fadeIn 0.5s ease-in 1 forwards;
+  }
+
+  #estadiosMovil .slideEstadiosMovil ul .estadio .info h3 {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+  }
+
+  #estadiosMovil .slideEstadiosMovil ul .estadio .info p {
+    font-size: 14px;
+    font-family: 'Philosopher', sans-serif;
+  }
+
+  #estadiosMovil .slideEstadiosMovil ul .estadio {
+    background-position: -13px 0px;
+    height: 340px;
+  }
+
+  #estadiosMovil .slideEstadiosMovil ul .estadio.active {
+    background: url('../images/soporteEstadio.png') no-repeat;
+    background-position: -13px 0px;
+    animation: fadeInEstadio 0.5s ease-in 1 forwards;
+  }
+
+  #estadiosMovil .slideEstadiosMovil ul .estadio.active img {
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
   }
 }
