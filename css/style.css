@@ -530,6 +530,11 @@ body {
   }
 }
 
+#balones {
+  overflow: hidden;
+  height: 350px;
+}
+
 #balones .header {
   background-color: #0e48c6;
   height: 72px;
@@ -555,6 +560,10 @@ body {
   background-position-x: 15px;
 }
 
+#balones .slideBalones {
+  position: relative;
+}
+
 #balones .slideBalones ul {
   list-style: none;
   padding: 0;
@@ -566,9 +575,44 @@ body {
   -moz-justify-content: space-between;
 }
 
+#balones .slideBalones hr {
+  border: none;
+  border-bottom: 10px solid #bdb189;
+  position: absolute;
+  top: 230px;
+  margin: 0 auto;
+  left: 0;
+  width: 980px;
+  right: 0;
+  z-index: -1;
+  display: block;
+}
+
 #balones .slideBalones ul .balon {
-  background: url('../images/soporteBalones.png') no-repeat;
+  background-position-y: -7px;
+  height: 220px;
   width: 250px;
+}
+
+#balones .slideBalones ul .balon.active {
+  background: url('../images/soporteBalones.png') no-repeat;
+  background-position-y: -7px;
+  padding-top: 5px;
+  animation: fadeInBalon 0.5s ease-in 1 forwards;
+  width: 250px;
+}
+
+#balones .slideBalones ul .balon.active img {
+  transform: scale(1.1) rotate(60deg);
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+}
+
+@keyframes fadeInBalon {
+  to {
+    height: 530px;
+  }
 }
 
 #balones .slideBalones ul .balon img {
@@ -578,18 +622,22 @@ body {
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
   cursor: pointer;
+  transition: 0.3s;
 }
 
 #balones .slideBalones ul .balon img:hover {
   filter: grayscale(0);
   -webkit-filter: grayscale(0);
   -moz-filter: grayscale(0);
+  transform: scale(1.1) rotate(60deg);
+  /* transform: rotate(90deg); */
 }
 
 #balones .slideBalones ul .balon .info {
   margin: 0 auto;
   opacity: 0;
-  width: 280px;
+  margin-top: 20px;
+  width: 203px;
 }
 
 #balones .slideBalones ul .balon .info.active {
@@ -601,9 +649,34 @@ body {
   font-weight: 400;
   margin: 0;
   text-align: center;
+  font-family: 'Acme', sans-serif;
+  font-weight: 400;
+}
+
+#balones .slideBalones ul .balon .info h3 span {
+  font-family: 'Acme', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 #balones .slideBalones ul .balon .info p {
   font-size: 14px;
   font-family: 'Philosopher', sans-serif;
+  margin: 5px 0 0 0;
+}
+
+#footer {
+  background: url('../images/footer.png') no-repeat;
+  background-position-x: -1px;
+  height: 527px;
+  margin-top: 60px;
+  width: 100%;
+}
+
+#footer .logoRusia {
+  background: url('../images/logoRusiaFooter.png') no-repeat;
+}
+
+#footer .logoRusia {
+  background: url('../images/laopinion.png') no-repeat;
 }

@@ -343,6 +343,34 @@ $(document).ready(function() {
       }
     }
   });
+
+  $('#balones .slideBalones ul .balon').click(function() {
+    const active = $(this).data('active');
+    const balones = document.querySelectorAll('#balones .balon');
+    console.log(balones);
+
+    if (active == 0) {
+      $(this)
+        .find('.info')
+        .addClass('active');
+      $(this).addClass('active');
+      $(this).data('active', 1);
+    } else {
+      $(this)
+        .find('.info')
+        .removeClass('active');
+      $(this).data('active', 0);
+      $(this).removeClass('active');
+      document.querySelector('#balones').style.height = '350px';
+    }
+
+    for (let balon of balones) {
+      // console.log(balon);
+      if ($(balon).hasClass('active')) {
+        document.querySelector('#balones').style.height = '620px';
+      }
+    }
+  });
 });
 
 let slideIndexFinales = 1;
@@ -391,4 +419,28 @@ function showDivsEstadios(n) {
   }
   x[slideIndexEstadios - 1].style.display = 'block';
   x[slideIndexEstadios - 1].classList.add('fade-in');
+}
+
+let slideIndexBalones = 1;
+showDivsBalones(slideIndexBalones);
+
+function siguienteBalon(n) {
+  showDivsBalones((slideIndexBalones += n));
+}
+
+function showDivsBalones(n) {
+  let i;
+  let x = document.getElementsByClassName('slideBalones');
+  if (n > x.length) {
+    slideIndexBalones = 1;
+  }
+  if (n < 1) {
+    slideIndexBalones = x.length;
+  }
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = 'none';
+    x[i].classList.remove('fade-in');
+  }
+  x[slideIndexBalones - 1].style.display = 'block';
+  x[slideIndexBalones - 1].classList.add('fade-in');
 }
