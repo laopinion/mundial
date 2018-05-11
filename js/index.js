@@ -333,7 +333,7 @@ $(document).ready(function() {
         .removeClass('active');
       $(this).data('active', 0);
       $(this).removeClass('active');
-      document.querySelector('#estadios').style.height = '527px';
+      document.querySelector('#estadios').style.height = '485px';
     }
 
     for (let estadio of estadios) {

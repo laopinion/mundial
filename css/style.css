@@ -53,6 +53,11 @@ body {
   width: 728px;
 }
 
+#header .logosHeader a {
+  height: 100%;
+  display: block;
+}
+
 #header .espacio {
   width: 50px;
 }
@@ -242,6 +247,10 @@ body {
   margin-top: 38px;
 }
 
+#grupos .movil {
+  display: none;
+}
+
 #grupos img {
   position: relative;
   left: -1px;
@@ -426,9 +435,10 @@ body {
 #estadios {
   background: url('../images/fondoEstadios.png') no-repeat;
   background-position-x: -1px;
-  height: 527px;
+  height: 485px;
   overflow: hidden;
   margin-top: 38px;
+  margin-bottom: 50px;
   padding-top: 38px;
   width: 100%;
 }
@@ -458,13 +468,14 @@ body {
   background-position-x: 15px;
 }
 
-#estadios .slideEstadios {
+/* #estadios .slideEstadios {
   height: 400px;
-}
+} */
 
 #estadios .slideEstadios ul {
   list-style: none;
   padding: 0;
+  height: 750px;
   display: flex;
   display: -webkit-flex;
   display: -moz-flex;
@@ -510,6 +521,7 @@ body {
 
 #estadios .slideEstadios ul .estadio {
   background-position: -13px 0px;
+  height: 340px;
 }
 
 #estadios .slideEstadios ul .estadio.active {
@@ -668,15 +680,234 @@ body {
 #footer {
   background: url('../images/footer.png') no-repeat;
   background-position-x: -1px;
-  height: 527px;
+  height: 465px;
   margin-top: 60px;
+  padding-top: 60px;
   width: 100%;
 }
 
-#footer .logoRusia {
-  background: url('../images/logoRusiaFooter.png') no-repeat;
+#footer .logos {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+  margin: 0 auto;
+  width: 725px;
 }
 
-#footer .logoRusia {
+#footer .logos a {
+  display: block;
+  height: 100%;
+}
+
+#footer .copy {
+  margin: 50px auto 30px;
+  font-size: 14px;
+  font-family: 'Philosopher', sans-serif;
+  color: #ffffff;
+  text-align: center;
+  width: 820px;
+}
+
+#footer .logos .logoRusia {
+  background: url('../images/logoRusiaFooter.png') no-repeat;
+  height: 116px;
+  width: 333px;
+}
+
+#footer .logos .logo {
   background: url('../images/laopinion.png') no-repeat;
+  background-position-y: 18px;
+  height: 116px;
+  width: 335px;
+}
+
+#footer .redes {
+  margin: 0 auto;
+  width: 275px;
+}
+
+#footer .redes p {
+  font-size: 14px;
+  font-family: 'Philosopher', sans-serif;
+  color: #ffffff;
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+}
+
+#footer .redes p span {
+  font-family: 'Acme', sans-serif;
+  font-size: 16px;
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+}
+
+#footer .redes p span:after {
+  content: '';
+  background: url('../images/estrellaContador.png') no-repeat;
+  height: 20px;
+  display: block;
+  filter: grayscale(100%);
+  width: 20px;
+}
+#footer .redes p span:before {
+  content: '';
+  background: url('../images/estrellaContador.png') no-repeat;
+  height: 20px;
+  display: block;
+  filter: grayscale(100%);
+  width: 20px;
+}
+
+#footer .redes ul {
+  list-style: none;
+  background: url('../images/cintilloRedes.png') no-repeat;
+  height: 58px;
+  padding: 0;
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  justify-content: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -moz-justify-content: space-evenly;
+  width: 265px;
+}
+
+#footer .redes ul li {
+  height: 40px;
+  width: 40px;
+}
+
+#footer .redes ul li a {
+  height: 100%;
+  display: block;
+}
+
+#footer .redes ul .facebook {
+  background: url('../images/redes.png') no-repeat;
+}
+
+#footer .redes ul .twitter {
+  background: url('../images/redes.png') no-repeat;
+  background-position-x: -59px;
+}
+
+#footer .redes ul .instagram {
+  background: url('../images/redes.png') no-repeat;
+  background-position-x: -118px;
+}
+
+#footer .redes ul .youtube {
+  background: url('../images/redes.png') no-repeat;
+  background-position-x: -177px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  #header {
+    background: url('../images/movil/header.png') no-repeat;
+    height: 168px;
+    background-size: 100%;
+  }
+  #header .contador {
+    background: url('../images/movil/contador.png') no-repeat;
+    height: 70px;
+    margin: 0 auto;
+    width: 320px;
+  }
+  #header .logo-rusia {
+    background: url('../images/movil/logosHeader.png') no-repeat;
+    height: 50px;
+    width: 135px;
+  }
+  #header .logo-op {
+    background: url('../images/movil/logosHeader.png') no-repeat;
+    height: 32px;
+    width: 132px;
+    background-position: -146px -17px;
+  }
+
+  #header .contador .content {
+    height: 50px;
+    width: 100%;
+  }
+
+  #header .contador .content .fecha_contador #dia,
+  #header .contador .content .fecha_contador #hora,
+  #header .contador .content .fecha_contador #minuto {
+    font-size: 28px;
+  }
+
+  #header .contador .content .fecha_contador span {
+    font-size: 14px;
+  }
+
+  #header .contador p {
+    font-size: 12px;
+    width: 100%;
+    margin: 0;
+  }
+
+  #header .logosHeader {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  #notas .notaPrincipal .img img {
+    height: auto;
+    width: 100%;
+  }
+  #notas .notaPrincipal .iconVideo {
+    top: 40%;
+    background-size: 60px;
+    width: 65px;
+    height: 38px;
+  }
+  #notas .notaPrincipal h3 a {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  #notas .masNotas {
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+  }
+
+  #notas .masNotas .nota {
+    margin-bottom: 5px;
+  }
+
+  #notas .masNotas .nota .iconGaleria,
+  #notas .masNotas .nota .iconVideo {
+    top: 40%;
+    background-size: 60px;
+    width: 65px;
+    height: 38px;
+  }
+
+  #grupos .desktop {
+    display: none;
+  }
+  #grupos .movil {
+    display: block;
+  }
+
+  #finalesMundiales .finales .principal {
+    width: 100%;
+  }
+
+  #finalesMundiales .finales .principal .img img {
+    height: auto;
+    width: 100%;
+  }
 }
