@@ -439,8 +439,6 @@ function siguienteFinales(n) {
 function showDivsFinales(n) {
   let i;
   let x = document.getElementsByClassName('slideFinales');
-  console.log(x);
-  console.log(n);
   if (n > x.length) {
     slideIndexFinales = 1;
   }

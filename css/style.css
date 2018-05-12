@@ -841,6 +841,10 @@ body {
     background-position: -146px 0;
   }
 
+  #notas .notaPrincipal .logo {
+    width: 150px;
+  }
+
   #header .contador .content {
     height: 45px;
     width: 80%;
@@ -857,7 +861,7 @@ body {
   }
 
   #header .contador .content .fecha_contador {
-    width: 130px;
+    width: 180px;
   }
 
   #header .contador p {
@@ -876,7 +880,8 @@ body {
     height: auto;
     width: 100%;
   }
-  #notas .notaPrincipal .iconVideo {
+  #notas .notaPrincipal .iconVideo,
+  #notas .notaPrincipal .iconGaleria {
     top: 40%;
     background-size: 60px;
     width: 65px;
@@ -922,6 +927,19 @@ body {
     align-items: center;
     -webkit-align-items: center;
     -moz-align-items: center;
+  }
+
+  #finalesMundiales .finales .iconGaleria,
+  #finalesMundiales .finales .iconVideo {
+    top: 40%;
+    background-size: 60px;
+    width: 65px;
+    height: 38px;
+  }
+
+  #finalesMundiales .header .btnRight,
+  #finalesMundiales .header .btnLeft {
+    background-position-x: 5px;
   }
 
   #finalesMundiales .finales .principal {
@@ -1206,5 +1224,76 @@ body {
     font-size: 14px;
     font-family: 'Philosopher', sans-serif;
     margin: 5px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  #notas .masNotas .nota .img img {
+    height: auto;
+    width: 100%;
+  }
+
+  #notas .notaPrincipal h3 {
+    width: 100%;
+  }
+
+  #finalesMundiales .finales .masNotas .nota .img img {
+    height: auto;
+    width: 100%;
+  }
+
+  #finalesMundiales .finales .masNotas {
+    width: 100%;
+  }
+
+  #notas .masNotas .nota {
+    width: 100%;
+  }
+
+  #estadiosMovil .slideEstadiosMovil ul .estadio img {
+    height: auto;
+    width: 100%;
+  }
+
+  #header .contador {
+    width: 100%;
+    background-size: 100%;
+  }
+
+  #finalesMundiales .finales h3 {
+    width: 100%;
+    left: 0;
+  }
+
+  #finalesMundiales .finales .masNotas .nota h3 {
+    width: 100%;
+    left: 0;
+  }
+
+  #finalesMundiales .header {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    height: 115px;
+    position: relative;
+  }
+
+  #finalesMundiales .header .btnRight {
+    position: absolute;
+    right: 0px;
+    bottom: 15px;
+    background-position: 50%;
+  }
+
+  #finalesMundiales .header .btnLeft {
+    position: absolute;
+    bottom: 15px;
+    left: 0px;
+    background-position: 50%;
+  }
+
+  #footer {
+    height: 475px;
+    padding-top: 35px;
   }
 }
