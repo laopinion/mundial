@@ -319,7 +319,7 @@ $(document).ready(function() {
   $('#estadios .slideEstadios ul .estadio').click(function() {
     const active = $(this).data('active');
     const estadios = document.querySelectorAll('#estadios .estadio');
-    console.log(estadios);
+    // console.log(estadios);
 
     if (active == 0) {
       $(this)
@@ -347,7 +347,7 @@ $(document).ready(function() {
   $('#estadiosMovil .slideEstadiosMovil ul .estadio').click(function() {
     const active = $(this).data('active');
     const estadios = document.querySelectorAll('#estadiosMovil .estadio');
-    console.log(estadios);
+    // console.log(estadios);
 
     if (active == 0) {
       $(this)
@@ -375,7 +375,7 @@ $(document).ready(function() {
   $('#balones .slideBalones ul .balon').click(function() {
     const active = $(this).data('active');
     const balones = document.querySelectorAll('#balones .balon');
-    console.log(balones);
+    // console.log(balones);
 
     if (active == 0) {
       $(this)
@@ -399,6 +399,34 @@ $(document).ready(function() {
       }
     }
   });
+
+  $('#balonesMovil .slideBalonesMovil ul .balon').click(function() {
+    const active = $(this).data('active');
+    const balones = document.querySelectorAll('#balonesMovil .balon');
+    // console.log(balones);
+
+    if (active == 0) {
+      $(this)
+        .find('.info')
+        .addClass('active');
+      $(this).addClass('active');
+      $(this).data('active', 1);
+    } else {
+      $(this)
+        .find('.info')
+        .removeClass('active');
+      $(this).data('active', 0);
+      $(this).removeClass('active');
+      document.querySelector('#balonesMovil').style.height = '350px';
+    }
+
+    for (let balon of balones) {
+      // console.log(balon);
+      if ($(balon).hasClass('active')) {
+        document.querySelector('#balonesMovil').style.height = '620px';
+      }
+    }
+  });
 });
 
 let slideIndexFinales = 1;
@@ -411,6 +439,8 @@ function siguienteFinales(n) {
 function showDivsFinales(n) {
   let i;
   let x = document.getElementsByClassName('slideFinales');
+  console.log(x);
+  console.log(n);
   if (n > x.length) {
     slideIndexFinales = 1;
   }
@@ -499,4 +529,28 @@ function showDivsBalones(n) {
   }
   x[slideIndexBalones - 1].style.display = 'block';
   x[slideIndexBalones - 1].classList.add('fade-in');
+}
+
+let slideIndexBalonesMovil = 1;
+showDivsBalonesMovil(slideIndexBalonesMovil);
+
+function siguienteBalonMovil(n) {
+  showDivsBalonesMovil((slideIndexBalonesMovil += n));
+}
+
+function showDivsBalonesMovil(n) {
+  let i;
+  let x = document.getElementsByClassName('slideBalonesMovil');
+  if (n > x.length) {
+    slideIndexBalonesMovil = 1;
+  }
+  if (n < 1) {
+    slideIndexBalonesMovil = x.length;
+  }
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = 'none';
+    x[i].classList.remove('fade-in');
+  }
+  x[slideIndexBalonesMovil - 1].style.display = 'block';
+  x[slideIndexBalonesMovil - 1].classList.add('fade-in');
 }
