@@ -17,6 +17,7 @@ $(document).ready(function() {
     })
     .then(function(notas) {
       notas.map(function(nota) {
+        $('#notas .notaPrincipal .preloader').hide();
         $('#notas .notaPrincipal h3').html(nota.node_title);
 
         if (nota.tipo == 'Video') {
@@ -36,6 +37,7 @@ $(document).ready(function() {
         } else {
           $('#notas .notaPrincipal .img').html(nota.imagen);
         }
+        $('#notas .notaPrincipal .sombra').show();
       });
     });
 

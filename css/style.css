@@ -12,6 +12,78 @@ body {
   width: 1000px;
 }
 
+.preloader {
+  background: white;
+  /* border: 1px solid #e5e6e9; */
+  border-radius: 5px;
+  min-height: 499px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.preloader .animation {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: preloadAnimation;
+  animation-timing-function: linear;
+  background: #f6f7f8;
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+}
+
+.preloader .animation-text {
+  animation-duration: 8s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: preloadAnimation;
+  animation-timing-function: linear;
+  background: #f6f7f8;
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+}
+
+.preloader .background {
+  display: flex;
+  min-height: 499px;
+  position: relative;
+  max-width: 1000px;
+}
+
+@keyframes preloadAnimation {
+  0% {
+    background-position: -769px 0;
+  }
+  100% {
+    background-position: 769px 0;
+  }
+}
+
+.preloader .bottom {
+  position: absolute;
+  height: 78px;
+  background: white;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 5px;
+  box-sizing: border-box;
+  width: 310px;
+}
+.preloader .bar {
+  height: 22px;
+  position: relative;
+  width: 100%;
+}
+
+.preloader .bar.medium {
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+.preloader .bar.small {
+  width: 50%;
+}
+
 #header {
   background: url('../images/header.png') no-repeat;
   background-position-x: -1px;
